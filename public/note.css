@@ -1,0 +1,76 @@
+.note {
+  background: #fffde7;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 340px;
+  margin: 10px;
+  float: left;
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.actionBox {
+  flex-grow: 1;
+}
+.note .nameBox h3 {
+  text-transform: uppercase;
+}
+.newDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.noteFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 5px;
+}
+
+.category {
+  color: green;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0.8;
+  text-align: left;
+}
+
+/* Like button stays aligned to the right */
+.likeButton button {
+  background: none;
+  font-size: 24px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.likeButton button:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .note {
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #ccc;
+    padding: 7px;
+    width: 300px;
+    margin: 10px 40px 15px 40px;
+    max-height: 250px;
+  }
+
+  .noteFooter {
+    font-size: 12px;
+  }
+
+  .likeButton button {
+    font-size: 20px;
+  }
+}
