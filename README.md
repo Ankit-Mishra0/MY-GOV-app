@@ -9,6 +9,7 @@ This web application aims to provide users with information about political lead
 ## **Current Status**
 ✅ Basic frontend structure is in place.  
 ✅ UI components for displaying leaders, feedback, and government schemes.  
+✅ National and regional political parties have been added.
 
 ---
 
@@ -28,7 +29,7 @@ This web application aims to provide users with information about political lead
    ```
 2. Navigate to the project folder:
    ```sh
-   cd MyGov
+   cd MY-GOV-app
    ```
 3. Install dependencies:
    ```sh
@@ -44,13 +45,8 @@ This web application aims to provide users with information about political lead
 
 ## **Screenshots**
 _Add relevant screenshots here_
-![Screenshot 2025-03-27 at 7 40 25 PM](https://github.com/user-attachments/assets/1582a865-210e-4637-ab5f-4caacb049900)
 
-<img width="1455" alt="Screenshot 2025-03-27 at 7 12 42 PM" src="https://github.com/user-attachments/assets/814add12-dd1b-401a-90c5-7f66cb48ab2c" />
-
----<img width="1470" alt="Screenshot 2025-03-27 at 7 42 56 PM" src="https://github.com/user-attachments/assets/d807017e-c507-4028-8ecc-f7c6e0c82884" />
-![Screenshot 2025-03-27 at 7 44 00 PM](https://github.com/user-attachments/assets/a954dbe7-21de-40d3-bb7e-f6f0a108703a)
-
+---
 
 ## **Contributions**
 Suggestions and contributions are welcome! Feel free to fork the repo, create a new branch, and submit a pull request.
