@@ -16,6 +16,9 @@ import Carousel from "./carousel";
 import LoginPage from "./login";
 import Notes from "./Note";
 import { Note } from "@mui/icons-material";
+import NationalParties from "./NationalParties";
+import RegionalParties from "./RegionalPartie";
+
 
 function App() {
   const [note, setNote] = useState([]); // State to store submitted notes
@@ -79,6 +82,8 @@ function App() {
             />
           }
         />
+        <Route  path="/national-parties" element={<NationalParties/>}/>
+        <Route  path="/regional-parties" element={<RegionalParties/>}/>
         <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Router>

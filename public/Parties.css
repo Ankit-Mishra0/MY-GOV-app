@@ -1,0 +1,90 @@
+.NationalHeading,
+.RegionalHeading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: chocolate;
+}
+.NationalPara,
+.RegionalPara {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: chocolate;
+}
+.nationalParties,
+.regionalParties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.WebLink{
+  text-decoration: none;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+}
+.partyCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  height: auto;
+  width: 20rem;
+  height: 490px;
+  margin: 20px;
+
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+  padding: 10px;
+}
+.partyCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.partySymbol img {
+  height: 13rem;
+  width: 100%;
+  object-fit: contain;
+  border-bottom: 1px solid #ddd;
+}
+.PartyName h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin: 10px 0;
+  font-family: "Lato", sans-serif;
+}
+.PartyMotto {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #666;
+  font-family: "Lato", sans-serif;
+  margin: 5px 0 15px;
+}
+@media (max-width: 1024px) {
+  .partyCard {
+    width: 90%; /* 2 cards per row on medium screens */
+    margin: 10px;
+  }
+  .WebLink{
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .partyCard {
+    width: 90%; 
+    justify-items: center;/* 1 card per row on small screens */
+  }
+  .WebLink{
+    width: 100%;
+  }
+  
+}

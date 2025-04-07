@@ -32,8 +32,8 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Dashboard
+              <a className="nav-link active" aria-current="page" href="/">
+                Home
               </a>
             </li>
 
@@ -96,19 +96,14 @@ function Nav() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/national-parties">
                     National parties
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/regional-parties">
                     Regional parties
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Independent candidates
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>

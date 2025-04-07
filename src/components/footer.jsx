@@ -79,6 +79,17 @@ function Footer() {
                     alt="applogo"
                   />
                 </a>
+                <a
+                  href="https://www.inc.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="links_img incLogo"
+                    src="images/INC_Symbol.png"
+                    alt="incLogo"
+                  />
+                </a>
               </p>
             </div>
           </div>

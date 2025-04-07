@@ -155,11 +155,18 @@ footer .Links {
   height: 50px;
   width: 70px;
   border-radius: 50%;
+
   /* Add spacing between images */
 }
 
 .Links .aapLogo {
-  width: 50px;
+  width: 40px;
+  border-radius: 0%;
+  height: 40px;
+  margin-right: 7px;
+}
+.Links .incLogo {
+  width: 40px;
 }
 
 .social_card {
@@ -474,6 +481,10 @@ button.complaint-button {
     width: 85%;
   }
   .Links .aapLogo {
+    width: 30px;
+    height: 20px;
+  }
+  .Links .incLogo {
     width: 30px;
   }
   .copyright {
