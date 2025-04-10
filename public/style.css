@@ -1,6 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
-  background-image: url(http://www.transparenttextures.com/patterns/concrete-wall-2.png);
+  background-image: url("https://www.transparenttextures.com/patterns/climpek.png");
   display: flex;
   flex-direction: column;
   min-height: 100vh;
