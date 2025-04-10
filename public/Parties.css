@@ -19,7 +19,7 @@
   gap: 20px;
   justify-content: space-between;
 }
-.WebLink{
+.WebLink {
   text-decoration: none;
   width: 25rem;
   display: flex;
@@ -68,23 +68,44 @@
   font-family: "Lato", sans-serif;
   margin: 5px 0 15px;
 }
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.searchBox {
+  border-radius: 10px;
+  text-align: center;
+  width: 20%;
+  font-size: 1rem;
+}
 @media (max-width: 1024px) {
   .partyCard {
     width: 90%; /* 2 cards per row on medium screens */
     margin: 10px;
   }
-  .WebLink{
+  .WebLink {
     width: 45%;
+  }
+  .searchBox {
+    width: 40%;
+    font-size: 2rem;
+    height: 40%;
+    border-radius: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .partyCard {
-    width: 90%; 
-    justify-items: center;/* 1 card per row on small screens */
+    width: 90%;
+    justify-items: center; /* 1 card per row on small screens */
   }
-  .WebLink{
+  .WebLink {
     width: 100%;
   }
-  
+  .searchBox {
+    font-size: 1.3rem;
+    width: 50%;
+    padding: 5px;
+  }
 }

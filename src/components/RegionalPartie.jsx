@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Parties from "./AllParties";
 
 function RegionalParties() {
+  const [search, setSearch] = useState("");
   return (
     <div>
       <div>
@@ -14,8 +15,25 @@ function RegionalParties() {
           culture, and development, and they can have a substantial impact on
           state politics and governance.
         </p>
+        <div className="searchContainer">
+        <input
+          type="text"
+          value={search}
+          placeholder="Search for a party..."
+          onChange={(e) => setSearch(e.target.value)}
+          className="searchBox"
+        />
+        </div>
         <div className="regionalParties">
-          {Parties.map((party) => {
+          {Parties.filter((party) => {
+            return (
+              (party.type === "State" &&
+                party.name
+                  .toLowerCase()
+                  .includes(search.toLocaleLowerCase())) ||
+              party.text.toLowerCase().includes(search.toLocaleLowerCase())
+            );
+          }).map((party) => {
             if (party.type === "State") {
               return (
                 <a
