@@ -38,7 +38,7 @@ function Nav() {
             </li>
 
             {/* NEW: Dropdown for Actions */}
-            <li className="nav-item dropdown">
+            <li className="nav-item dropdown actions">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -84,7 +84,7 @@ function Nav() {
               </ul>
             </li>
 
-            <li className="nav-item dropdown">
+            <li className="nav-item dropdown political-parties">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
