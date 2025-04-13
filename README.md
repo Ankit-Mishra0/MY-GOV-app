@@ -12,20 +12,21 @@ This web application aims to provide users with information about political lead
 - ✅ UI components for displaying leaders, feedback, and government schemes.
 - ✅ National and regional political parties have been added.
 - ✅ Tutorial system for first-time users using Reactour.
+- ✅ Backend integration for user authentication (signup and login).
 
 ---
 
 ## 🚀 Upcoming Features
 
 - 📸 **Leader Info on Click** – Clicking on a political leader’s image will fetch their full details using the Gemini API.
-- 🔐 **Login Functionality** – A secure user authentication system with signup and login routes.
-- 💾 **Persistent Data Storage** – Currently, feedback, complaints, and advice are stored temporarily in the frontend state. Backend and database integration are in progress.
-- ⚡ **Backend Integration** – PostgreSQL will be used for user and opinion data.
-- 🎨 **Enhanced UI/UX** – UI improvements, animations, and responsive design updates.
+- 💾 **Persistent Data Storage** – Currently, feedback, complaints, and advice are stored temporarily in the frontend state. Backend and database integration for these features is in progress.
+- ⚡ **Enhanced UI/UX** – UI improvements, animations, and responsive design updates.
 
 ---
 
 ## 🛠️ How to Run the Project
+
+### **Frontend Setup**
 
 1. **Clone this repository**
 
@@ -51,6 +52,37 @@ This web application aims to provide users with information about political lead
    ```
 
 The website will start in development mode at `http://localhost:3000`.
+
+---
+
+### **Backend Setup**
+
+1. **Navigate to the backend folder**
+
+   ```bash
+   cd backend
+   ```
+
+2. **Install backend dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   - Create a `.env` file in the `backend` folder with the following content:
+     ```env
+     PORT=5000
+     JWT_SECRET=your-secret-key
+     DATABASE_URL=your-database-url
+     ```
+
+4. **Start the backend server**
+   ```bash
+   node server.js
+   ```
+
+The backend server will start at `http://localhost:5000`.
 
 ---
 
