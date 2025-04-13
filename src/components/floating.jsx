@@ -1,22 +1,22 @@
 import React, { useState, useRef, useEffect } from "react";
 import Fab from "@mui/material/Fab";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import { useLocation } from "react-router-dom"; // NEW: Import useLocation
+import { useLocation } from "react-router-dom"; //  Import useLocation
 
 function Menu({ addNote }) {
-  const location = useLocation(); // NEW: Get category from navigation state
-  const [showForm, setShowForm] = useState(location.state?.category || null); // NEW: Set initial form based on category
+  const location = useLocation(); //  Get category from navigation state
+  const [showForm, setShowForm] = useState(location.state?.category || null); // Set initial form based on category
   const secondInputRef = useRef(null);
 
   const [formData, setFormData] = useState({
     party: "",
     input: "",
-    category: showForm, // NEW: Store category
+    category: showForm, // Store category
   });
 
   useEffect(() => {
     if (location.state?.category) {
-      setShowForm(location.state.category); // NEW: Update form if category changes
+      setShowForm(location.state.category); //  Update form if category changes
       setFormData((prev) => ({ ...prev, category: location.state.category }));
     }
   }, [location.state]);
@@ -46,7 +46,7 @@ function Menu({ addNote }) {
         id: Date.now(),
         name: formData.party,
         text: formData.input,
-        category: showForm, // ✅ Store category (Complaint, Feedback, Advice)
+        category: showForm, // Store category (Complaint, Feedback, Advice)
       });
     }
 

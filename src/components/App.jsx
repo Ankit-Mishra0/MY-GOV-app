@@ -6,7 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 
-import { TourProvider, useTour } from "@reactour/tour"; 
+import { TourProvider, useTour } from "@reactour/tour";
 
 import Header from "./header";
 import Nav from "./nav";
@@ -62,6 +62,11 @@ function AppContent({ addNote, note, doLike, likeIt }) {
           element={
             <>
               <Header />
+              <div className="view-all">
+                {" "}
+                <button className="viewButton">view all</button>
+              </div>
+
               <div className="cards-container">
                 {Leader.map((leader) => (
                   <Card

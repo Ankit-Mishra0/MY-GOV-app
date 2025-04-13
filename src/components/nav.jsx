@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LoginIcon from "@mui/icons-material/Login";
+import LogoutIcon from "@mui/icons-material/Logout";
 import { Fab } from "@mui/material";
-import { Link, useLocation, useNavigate } from "react-router-dom"; // NEW: Added useNavigate for navigation
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Nav() {
   const location = useLocation();
-  const navigate = useNavigate(); // NEW: Hook for programmatic navigation
+  const navigate = useNavigate();
 
-  function handleActionClick(category) {
-    navigate("/menu", { state: { category } }); // NEW: Navigates to Menu with category state
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    console.log(storedUser);
+    setUser(storedUser);
+  }, [location.pathname]); // re-check when path changes
+
+  function handleLogout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate(location.pathname);
   }
 
   return (
@@ -18,6 +30,7 @@ function Nav() {
           <img className="flag_icon" src="/images/indian_flag.png" alt="" />{" "}
           MyGov
         </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -29,15 +42,15 @@ function Nav() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <a className="nav-link active" href="/">
                 Home
               </a>
             </li>
 
-            {/* NEW: Dropdown for Actions */}
             <li className="nav-item dropdown actions">
               <a
                 className="nav-link dropdown-toggle"
@@ -48,39 +61,17 @@ function Nav() {
                 Actions
               </a>
               <ul className="dropdown-menu">
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/menu"
-                    state={{
-                      category: "Complaint",
-                    }}
-                  >
-                    Complaint
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/menu"
-                    state={{
-                      category: "Feedback",
-                    }}
-                  >
-                    Feedback
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/menu"
-                    state={{
-                      category: "Advice",
-                    }}
-                  >
-                    Advice
-                  </Link>
-                </li>
+                {["Complaint", "Feedback", "Advice"].map((cat) => (
+                  <li key={cat}>
+                    <Link
+                      className="dropdown-item"
+                      to="/menu"
+                      state={{ category: cat }}
+                    >
+                      {cat}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </li>
 
@@ -90,53 +81,81 @@ function Nav() {
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
-                aria-expanded="false"
               >
                 Political Parties
               </a>
               <ul className="dropdown-menu">
                 <li>
                   <Link className="dropdown-item" to="/national-parties">
-                    National parties
+                    National Parties
                   </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/regional-parties">
-                    Regional parties
+                    Regional Parties
                   </Link>
                 </li>
               </ul>
             </li>
+
             <li className="nav-item">
-              <Link to={"/opinion"} className="nav-link " aria-current="page">
-                People's opinion
+              <Link to={"/opinion"} className="nav-link">
+                People's Opinion
               </Link>
             </li>
           </ul>
-          {location.pathname !== "/login" && (
-            <Link className="login" to={"/login"}>
-              <Fab
-                className="login-btn"
-                variant="extended"
-                size="small"
-                sx={{
-                  color: "white",
-                  backgroundColor: "black",
-                  boxShadow: "0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2)",
-                  transition:
-                    "box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease",
-                  "&:hover": {
-                    boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.4)",
-                    color: "#000",
-                    backgroundColor: "#FFFFFF",
-                  },
-                }}
+
+          {/* Login or Logout area */}
+          <div style={{ marginLeft: "auto" }}>
+            {user ? (
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "12px" }}
               >
-                login
-                <LoginIcon />
-              </Fab>
-            </Link>
-          )}
+                <span>
+                  Welcome, <strong>{user.username}</strong>
+                </span>
+                <Fab
+                  className="logout-btn"
+                  variant="extended"
+                  size="small"
+                  onClick={handleLogout}
+                  sx={{
+                    color: "white",
+                    backgroundColor: "black",
+                    "&:hover": {
+                      backgroundColor: "#f44336",
+                      color: "white",
+                    },
+                  }}
+                >
+                  Logout
+                  <LogoutIcon sx={{ ml: 1 }} />
+                </Fab>
+              </div>
+            ) : (
+              location.pathname !== "/login" && (
+                <Link className="login" to={"/login"}>
+                  <Fab
+                    className="login-btn"
+                    variant="extended"
+                    size="small"
+                    sx={{
+                      color: "white",
+                      backgroundColor: "black",
+                      boxShadow: "0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2)",
+                      "&:hover": {
+                        color: "#000",
+                        backgroundColor: "#FFFFFF",
+                      },
+                    }}
+                  >
+                    Login
+                    <LoginIcon sx={{ ml: 1 }} />
+                  </Fab>
+                </Link>
+              )
+            )}
+          </div>
         </div>
       </div>
     </nav>

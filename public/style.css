@@ -39,6 +39,20 @@ body {
   padding: 10px;
   align-items: center;
 }
+.view-all {
+  display: flex;
+  justify-content: flex-end;
+}
+.viewButton {
+  border-radius: 100px;
+  margin: 10px 10px 0 0;
+  background-color: white;
+  color: navy;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.viewButton:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 .transparent {
   display: flex;
   font-size: 3rem;
