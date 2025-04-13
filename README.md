@@ -28,16 +28,19 @@ This web application aims to provide users with information about political lead
 ## 🛠️ How to Run the Project
 
 1. **Clone this repository**
+
    ```bash
    git clone https://github.com/Ankit-Mishra0/MY-GOV-app.git
    ```
 
 2. **Navigate to the project folder**
+
    ```bash
    cd MY-GOV-app
    ```
 
 3. **Install dependencies**
+
    ```bash
    npm install
    ```
@@ -53,7 +56,6 @@ The website will start in development mode at `http://localhost:3000`.
 
 ## 🖼️ Screenshots
 
-
 <img width="1470" alt="Screenshot 2025-04-12 at 6 34 18 PM" src="https://github.com/user-attachments/assets/e59d4a6f-8897-4f2f-a1d2-7dac358b21e7" />
 <img width="1470" alt="Screenshot 2025-04-12 at 6 34 34 PM" src="https://github.com/user-attachments/assets/0158cfaa-e6eb-4746-9cbc-7eda991c68b6" />
 <img width="1470" alt="Screenshot 2025-04-12 at 6 34 53 PM" src="https://github.com/user-attachments/assets/09db01fe-f70a-4165-b8f2-8618142db3ab" />
@@ -66,6 +68,7 @@ The website will start in development mode at `http://localhost:3000`.
 
 Suggestions and contributions are welcome!  
 To contribute:
+
 - Fork the repository.
 - Create a new branch.
 - Submit a pull request with your improvements or fixes.
