@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useNavi } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   useLocation,
+  useNavigate
 } from "react-router-dom";
 
 import { TourProvider, useTour } from "@reactour/tour";
@@ -20,6 +21,8 @@ import LoginPage from "./login";
 import Notes from "./Note";
 import NationalParties from "./NationalParties";
 import RegionalParties from "./RegionalPartie";
+import AllLeaders from "./allLeaders";
+
 
 const steps = [
   {
@@ -42,9 +45,10 @@ const steps = [
   },
 ];
 
+
 function AppContent({ addNote, note, doLike, likeIt }) {
   const { setIsOpen } = useTour();
-
+  const navigate = useNavigate();
   useEffect(() => {
     const visited = localStorage.getItem("visited_tutorial");
     if (!visited) {
@@ -64,7 +68,7 @@ function AppContent({ addNote, note, doLike, likeIt }) {
               <Header />
               <div className="view-all">
                 {" "}
-                <button className="viewButton">view all</button>
+                <button onClick={()=>navigate('/leaders')} className="viewButton">view all</button>
               </div>
 
               <div className="cards-container">
@@ -74,6 +78,7 @@ function AppContent({ addNote, note, doLike, likeIt }) {
                     name={leader.name}
                     about={leader.about}
                     image={leader.image}
+                    variant="main"
                   />
                 ))}
               </div>
@@ -94,6 +99,7 @@ function AppContent({ addNote, note, doLike, likeIt }) {
             />
           }
         />
+        <Route path="/leaders" element={<AllLeaders />} />
         <Route
           path="/opinion"
           element={

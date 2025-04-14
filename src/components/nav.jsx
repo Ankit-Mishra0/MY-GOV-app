@@ -46,9 +46,9 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" href="/">
+              <Link className="nav-link active" to="/">
                 Home
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item dropdown actions">

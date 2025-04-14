@@ -1,0 +1,131 @@
+footer {
+  /* text-align: center; */
+  height: auto;
+  width: 100%;
+  font-family: "Rubik", serif;
+  margin-top: 30px;
+  color: wheat;
+  background: linear-gradient(to right, black, grey, lightgrey);
+}
+footer p {
+  margin: 0;
+  color: white;
+}
+footer a {
+  text-decoration: none;
+}
+footer .social p {
+  font-size: 2rem;
+
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social_img {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0, 0.4);
+  transition: text-shadow ease 0.3s;
+}
+.social_img:hover {
+  text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.7);
+}
+.youtube {
+  height: 60px;
+  width: 60px;
+}
+.allFooter {
+  display: flex;
+}
+footer .contact {
+  width: 500px;
+}
+footer .contact .detail {
+  padding: 5px;
+}
+
+.copyright {
+  text-align: center;
+}
+footer .Links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align content to the right */
+  margin-left: auto; /* Push it to the right */
+
+  width: 300px;
+}
+.contact h2 {
+  text-align: left;
+  margin: 0;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.Links h2 {
+  text-align: right; /* Align heading to the right */
+  margin: 0;
+  padding-bottom: 5px;
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+.inLink {
+  display: flex;
+  justify-content: flex-end; /* Ensure links align to the right */
+}
+
+.Links .links_img {
+  height: 50px;
+  width: 70px;
+  border-radius: 50%;
+
+  /* Add spacing between images */
+}
+
+.Links .aapLogo {
+  width: 40px;
+  border-radius: 0%;
+  height: 40px;
+  margin-right: 7px;
+}
+.Links .incLogo {
+  width: 40px;
+}
+@media (max-width: 768px) {
+  footer .social {
+    font-size: 1.3rem;
+  }
+  .contact h2 {
+    text-align: left;
+    margin: 0;
+    padding: 3px;
+    font-size: 14px;
+  }
+  .Links h2 {
+    padding-bottom: 3px;
+    margin-right: 15px;
+    font-size: 20px;
+  }
+  .Links .links_img {
+    height: 30px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  .floating-container {
+    width: 85%;
+  }
+  .Links .aapLogo {
+    width: 30px;
+    height: 20px;
+  }
+  .Links .incLogo {
+    width: 30px;
+  }
+  .copyright {
+    font-size: 15px;
+  }
+}

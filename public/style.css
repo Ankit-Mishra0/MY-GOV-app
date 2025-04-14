@@ -85,164 +85,7 @@ body {
   color: #138808;
   text-shadow: 1px 1px 1px rgba(0, 0, 0);
 }
-footer {
-  /* text-align: center; */
-  height: auto;
-  width: 100%;
-  font-family: "Rubik", serif;
-  margin-top: 30px;
-  color: wheat;
-  background: linear-gradient(to right, black, grey, lightgrey);
-}
-footer p {
-  margin: 0;
-  color: white;
-}
-footer a {
-  text-decoration: none;
-}
-footer .social p {
-  font-size: 2rem;
 
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.social_img {
-  height: 50px;
-  width: 50px;
-  padding: 10px;
-  border-radius: 50%;
-  text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0, 0.4);
-  transition: text-shadow ease 0.3s;
-}
-.social_img:hover {
-  text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.7);
-}
-.youtube {
-  height: 60px;
-  width: 60px;
-}
-.allFooter {
-  display: flex;
-}
-footer .contact {
-  width: 500px;
-}
-footer .contact .detail {
-  padding: 5px;
-}
-
-.copyright {
-  text-align: center;
-}
-footer .Links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* Align content to the right */
-  margin-left: auto; /* Push it to the right */
-
-  width: 300px;
-}
-.contact h2 {
-  text-align: left;
-  margin: 0;
-  padding: 5px;
-  font-size: 20px;
-}
-
-.Links h2 {
-  text-align: right; /* Align heading to the right */
-  margin: 0;
-  padding-bottom: 5px;
-  margin-right: 20px;
-  font-size: 30px;
-}
-
-.inLink {
-  display: flex;
-  justify-content: flex-end; /* Ensure links align to the right */
-}
-
-.Links .links_img {
-  height: 50px;
-  width: 70px;
-  border-radius: 50%;
-
-  /* Add spacing between images */
-}
-
-.Links .aapLogo {
-  width: 40px;
-  border-radius: 0%;
-  height: 40px;
-  margin-right: 7px;
-}
-.Links .incLogo {
-  width: 40px;
-}
-
-.social_card {
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 0;
-  height: auto;
-  width: 16rem;
-  margin: 20px;
-  border-radius: 10px;
-  overflow: hidden; /* Ensures no content overflows outside the card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: #ffffff; /* Background color for the card */
-}
-
-.social_card:hover {
-  transform: translateY(-10px); /* Adds lift effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.social_card .LeaderImg img {
-  height: 13rem;
-  width: 100%;
-  object-fit: cover; /* Ensures the image scales well within the card */
-  border-bottom: 1px solid #ddd;
-}
-
-.social_card .LeaderName h2 {
-  font-size: 1.5rem;
-  text-align: center;
-  color: #333;
-  margin: 10px 0;
-  font-family: "Lato", sans-serif;
-}
-
-.social_card .aboutLeader h3 {
-  font-size: 1.2rem;
-  text-align: center;
-  color: #666;
-  font-family: "Lato", sans-serif;
-  margin: 5px 0 15px;
-}
-
-.social_card .aboutLeader h3::first-letter {
-  text-transform: uppercase; /* Capitalizes the first letter */
-}
-
-.social_card .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-}
-
-.social_card:hover .LeaderImg img {
-  filter: brightness(1.1); /* Brightens the image slightly on hover */
-}
 .cards-container {
   display: flex;
   overflow-x: auto;
@@ -378,9 +221,7 @@ footer .Links {
   font-size: 1rem;
 }
 
-.complaint {
-  height: 50px;
-}
+
 button.complaint-button {
   height: 30px;
   width: 30px;
@@ -392,19 +233,6 @@ button.complaint-button {
   color: white;
 }
 
-.doComplaint {
-  background-color: #000;
-  color: #138808;
-  border-radius: 10px;
-  height: 60px;
-  font-size: 1.2rem;
-  box-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0, 0.5);
-  transition: background-color 1s ease, color 0.3s ease;
-}
-.doComplaint:hover {
-  background-color: white;
-  color: #ff9933;
-}
 .Carousel {
   width: 100%;
   height: 300px;
@@ -472,58 +300,7 @@ button.complaint-button {
   .tag_line {
     font-size: 1.5rem;
   }
-  footer .social {
-    font-size: 1.3rem;
-  }
-  .contact h2 {
-    text-align: left;
-    margin: 0;
-    padding: 3px;
-    font-size: 14px;
-  }
-  .Links h2 {
-    padding-bottom: 3px;
-    margin-right: 15px;
-    font-size: 20px;
-  }
-  .Links .links_img {
-    height: 30px;
-    width: 50px;
-    border-radius: 50%;
-  }
-  .floating-container {
-    width: 85%;
-  }
-  .Links .aapLogo {
-    width: 30px;
-    height: 20px;
-  }
-  .Links .incLogo {
-    width: 30px;
-  }
-  .copyright {
-    font-size: 15px;
-  }
 
-  .social_card {
-    width: 13rem;
-    height: 250px;
-    margin: 10px;
-    border-radius: 7px;
-  }
-  .social_card .LeaderName h2 {
-    font-size: 1rem;
-  }
-  .social_card .aboutLeader h3 {
-    font-size: 0.8rem;
-    margin: 3px 0 10px;
-  }
-  .social_card .LeaderImg img {
-    height: 10rem;
-  }
-  .social_card .card {
-    padding: 7px;
-  }
   .gallery-item {
     padding: 6%;
   }

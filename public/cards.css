@@ -1,0 +1,107 @@
+.main-card {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  height: auto;
+  width: 16rem;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures no content overflows outside the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff; /* Background color for the card */
+}
+.all-card1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+}
+.all-card .card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 16rem;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.main-card:hover,
+.all-card .card:hover {
+  transform: translateY(-10px); /* Adds lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.main-card .LeaderImg img,
+.all-card .LeaderImg img {
+  height: 13rem;
+  width: 100%;
+  object-fit: cover; /* Ensures the image scales well within the card */
+  border-bottom: 1px solid #ddd;
+}
+
+.main-card .LeaderName h2,
+.all-card .LeaderName h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  margin: 10px 0;
+  font-family: "Lato", sans-serif;
+}
+
+.main-card .aboutLeader h3,
+.all-card .aboutLeader h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #666;
+  font-family: "Lato", sans-serif;
+  margin: 5px 0 15px;
+}
+
+.main-card .aboutLeader h3::first-letter,
+.all-card .aboutLeader h3::first-letter {
+  text-transform: uppercase; /* Capitalizes the first letter */
+}
+
+.main-card .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.main-card:hover .LeaderImg img,
+.all-card:hover .LeaderImg img {
+  filter: brightness(1.1); /* Brightens the image slightly on hover */
+}
+@media (max-width: 768px) {
+  .main-card {
+    width: 13rem;
+    height: 250px;
+    margin: 10px;
+    border-radius: 7px;
+  }
+  .main-card .LeaderName h2 {
+    font-size: 1rem;
+  }
+  .main-card .aboutLeader h3 {
+    font-size: 0.8rem;
+    margin: 3px 0 10px;
+  }
+  .main-card .LeaderImg img {
+    height: 10rem;
+  }
+  .main-card .card {
+    padding: 7px;
+  }
+}

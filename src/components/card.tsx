@@ -1,8 +1,9 @@
 import React from "react";
 
 function Card(props) {
+  const {variant="main"}=props;
   return (
-    <div className="social_card main-content">
+    <div className={`social_card main-content ${variant === "all" ? "all-card" : "main-card"}`}>
       <div className="card">
         <div className="LeaderImg">
           <img src={props.image} alt={props.name} />

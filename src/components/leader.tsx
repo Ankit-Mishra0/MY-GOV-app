@@ -29,5 +29,33 @@ const Leader = [
     about: "Former Chief Minister of Delhi",
     image: "/images/Arvind_Kejriwal.png",
   },
+  {
+    key: 6,
+    name: "Mamata Banerjee",
+    about: "Chief Minister of West Bengal",
+    image: "/images/Mamata_Banerjee.webp",
+  },
+  {
+    key: 7,
+    name: "Sonia Gandhi",
+    about: "Former President of Indian National Congress",
+    image: "/images/Sonia_Gandhi.png",
+  },
+  {
+    key: 8,
+    name: "Nitin Gadkari",
+    about: "Minister of Road Transport and Highways of India",
+    image: "/images/Nitin_Gadkari.png",
+  },
+ 
+  {
+    key: 9,
+    name: "Piyush Goyal",
+    about: "Minister of Commerce and Industry of India",
+    image: "/images/Piyush_Goyal.png",
+  },
+
 ];
 export default Leader;
+
+  
