@@ -1,5 +1,10 @@
 # 🇮🇳 MyGov Web Application
 
+👥 **Team Members**  
+- **Ankit Mishra** (2023UCS1711)  
+- **Amit** (2023UCS1744)  
+- **Naman** (2023UCS1679)  
+
 🚧 **Work in Progress** 🚧  
 This web application aims to provide users with information about political leaders, allow them to submit feedback, and interact with various government-related topics.  
 **Note:** The project is still under development, and several key features are yet to be implemented.
@@ -13,12 +18,12 @@ This web application aims to provide users with information about political lead
 - ✅ National and regional political parties have been added.
 - ✅ Tutorial system for first-time users using Reactour.
 - ✅ Backend integration for user authentication (signup and login).
+- ✅ **Leader Info on Click** – Clicking on a political leader’s image fetches their full details using the Gemini API.
 
 ---
 
 ## 🚀 Upcoming Features
 
-- 📸 **Leader Info on Click** – Clicking on a political leader’s image will fetch their full details using the Gemini API.
 - 💾 **Persistent Data Storage** – Currently, feedback, complaints, and advice are stored temporarily in the frontend state. Backend and database integration for these features is in progress.
 - ⚡ **Enhanced UI/UX** – UI improvements, animations, and responsive design updates.
 
@@ -75,6 +80,7 @@ The website will start in development mode at `http://localhost:3000`.
      PORT=5000
      JWT_SECRET=your-secret-key
      DATABASE_URL=your-database-url
+     GEMINI_API_KEY=your-gemini-api-key
      ```
 
 4. **Start the backend server**
