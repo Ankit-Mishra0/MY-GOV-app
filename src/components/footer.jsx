@@ -45,7 +45,7 @@ function Footer() {
             <p className="detail">
               Email <KeyboardDoubleArrowRightIcon />{" "}
               <a href="mailto: ankit.mishraug23@nsut.ac.in">
-                ankit.mishraug23@nsut.ac.in
+                mailtogov@gmail.com
               </a>
             </p>
             <p className="detail">

@@ -26,7 +26,14 @@ function Nav() {
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
-        <Link className="navbar-brand" to={"/"}>
+        <Link
+          className="navbar-brand"
+          to={"/"}
+          onClick={() => {
+            localStorage.removeItem("visited_tutorial");
+            window.location.reload();
+          }}
+        >
           <img className="flag_icon" src="/images/indian_flag.png" alt="" />{" "}
           MyGov
         </Link>

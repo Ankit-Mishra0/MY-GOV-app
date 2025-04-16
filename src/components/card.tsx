@@ -1,9 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Card(props) {
-  const {variant="main"}=props;
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/leaderInfo", {
+      state: {
+        name: props.name,
+        image: props.image,
+      },
+    });
+  };
+  const { variant = "main" } = props;
   return (
-    <div className={`social_card main-content ${variant === "all" ? "all-card" : "main-card"}`}>
+    <div
+    onClick={handleClick}
+      className={`social_card main-content ${
+        variant === "all" ? "all-card" : "main-card"
+      }`}
+    >
       <div className="card">
         <div className="LeaderImg">
           <img src={props.image} alt={props.name} />

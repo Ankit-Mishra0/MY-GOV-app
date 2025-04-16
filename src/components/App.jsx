@@ -1,10 +1,10 @@
-import React, { useState, useEffect,useNavi } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   useLocation,
-  useNavigate
+  useNavigate,
 } from "react-router-dom";
 
 import { TourProvider, useTour } from "@reactour/tour";
@@ -22,7 +22,7 @@ import Notes from "./Note";
 import NationalParties from "./NationalParties";
 import RegionalParties from "./RegionalPartie";
 import AllLeaders from "./allLeaders";
-
+import LeaderInfo from "./LeaderInfo";
 
 const steps = [
   {
@@ -45,14 +45,14 @@ const steps = [
   },
 ];
 
-
 function AppContent({ addNote, note, doLike, likeIt }) {
   const { setIsOpen } = useTour();
   const navigate = useNavigate();
+
   useEffect(() => {
     const visited = localStorage.getItem("visited_tutorial");
     if (!visited) {
-      setIsOpen(true); //
+      setIsOpen(true);
       localStorage.setItem("visited_tutorial", "true");
     }
   }, [setIsOpen]);
@@ -67,8 +67,12 @@ function AppContent({ addNote, note, doLike, likeIt }) {
             <>
               <Header />
               <div className="view-all">
-                {" "}
-                <button onClick={()=>navigate('/leaders')} className="viewButton">view all</button>
+                <button
+                  onClick={() => navigate("/leaders")}
+                  className="viewButton"
+                >
+                  view all
+                </button>
               </div>
 
               <div className="cards-container">
@@ -115,6 +119,7 @@ function AppContent({ addNote, note, doLike, likeIt }) {
         />
         <Route path="/national-parties" element={<NationalParties />} />
         <Route path="/regional-parties" element={<RegionalParties />} />
+        <Route path="/leaderInfo" element={<LeaderInfo />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
     </>
@@ -122,7 +127,12 @@ function AppContent({ addNote, note, doLike, likeIt }) {
 }
 
 function App() {
-  const [note, setNote] = useState([]);
+  // 🧠 Load from localStorage when App loads
+  const [note, setNote] = useState(() => {
+    const savedNotes = localStorage.getItem("myGovNotes");
+    return savedNotes ? JSON.parse(savedNotes) : [];
+  });
+
   const [doLike, toggleLike] = useState({});
 
   function likeIt(id) {
@@ -130,7 +140,11 @@ function App() {
   }
 
   function addNote(newNote) {
-    setNote((prevNotes) => [...prevNotes, newNote]);
+    setNote((prevNotes) => {
+      const updatedNotes = [...prevNotes, newNote];
+      localStorage.setItem("myGovNotes", JSON.stringify(updatedNotes)); // Save
+      return updatedNotes;
+    });
   }
 
   return (
