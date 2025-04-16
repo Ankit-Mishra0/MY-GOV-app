@@ -1,10 +1,5 @@
 # 🇮🇳 MyGov Web Application
 
-👥 **Team Members**  
-- **Ankit Mishra** (2023UCS1711)  
-- **Amit** (2023UCS1744)  
-- **Naman** (2023UCS1679)  
-
 🚧 **Work in Progress** 🚧  
 This web application aims to provide users with information about political leaders, allow them to submit feedback, and interact with various government-related topics.  
 **Note:** The project is still under development, and several key features are yet to be implemented.
@@ -115,6 +110,6 @@ To contribute:
 
 ## 📌 Stay tuned for updates!
 
-Follow this project to stay updated as we continue building features that empower citizens to better engage with their government.
+Follow this project to stay updated as I continue building features that empower citizens to better engage with their government.
 
 ---
